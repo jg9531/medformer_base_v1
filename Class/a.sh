@@ -1,0 +1,31 @@
+python main.py \
+  --data_flag retinamnist \
+  --data_path ./data \
+  --epochs 100 \
+  --batch_size 32 \
+  --lr 0.001 \
+  --weight_decay 0.0001 \
+  --warmup_epochs 5 \
+  --early_stopping_patience 10 \
+  --model_type m_vit_small \
+  --dropout 0.1 \
+  --loss ce \
+  --optimizer adamw \
+  --scheduler cosine \
+  --image_size 224 \
+  --augmentation basic \
+  --mixup_alpha 0.0 \
+  --cutmix_alpha 0.0 \
+  --label_smoothing 0.0 \
+  --gradient_clip 1.0 \
+  --val_frequency 1 \
+  --save_frequency 10 \
+  --save_dir ./experiments \
+  --experiment_name exp1 \
+  --wandb_project medvit-training \
+  --device auto \
+  --num_workers 4 \
+  --pretrained \
+  --use_wandb \
+  --pin_memory \
+  --compute_metrics
